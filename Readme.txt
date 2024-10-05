@@ -1,12 +1,21 @@
-#Bike Sharing Dashboard#
+==========================================
+Bike Sharing Dashboard
+==========================================
 
-## Deskripsi
+==========================================
+Deskripsi
+==========================================
 Proyek ini adalah dashboard analisis data untuk sistem bike sharing yang menggunakan dataset dari Capital Bikeshare di Washington D.C. Dashboard ini memberikan visualisasi dan analisis mengenai pola penggunaan sepeda berdasarkan faktor lingkungan dan musiman.
 
-## Prerequisites
+==========================================
+Prerequisites
+==========================================
 Sebelum menjalankan dashboard, pastikan Anda memiliki Python 3.1 terinstal di sistem Anda.
 
-## Instalasi
+==========================================
+Instalasi
+==========================================
+
 1. Clone repositori ini:
    ```bash
    git clone <URL_REPOSITORI>
