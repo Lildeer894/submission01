@@ -1,4 +1,4 @@
-#**Bike Sharing Dashboard**
+#Bike Sharing Dashboard#
 
 ## Deskripsi
 Proyek ini adalah dashboard analisis data untuk sistem bike sharing yang menggunakan dataset dari Capital Bikeshare di Washington D.C. Dashboard ini memberikan visualisasi dan analisis mengenai pola penggunaan sepeda berdasarkan faktor lingkungan dan musiman.
