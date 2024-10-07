@@ -11,9 +11,6 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 # Judul Dashboard
 st.markdown("<h1 style='text-align: center;'>🚴‍♂️ Bike Sharing Dashboard 🚴‍♀️</h1>", unsafe_allow_html=True)
 
-# Menambahkan gambar di bagian atas
-st.image("gambar1.jpeg", caption="Sistem Bike Sharing di Kota Anda", use_column_width='auto', width=700)
-
 # Penjelasan - Background
 st.markdown("<h2 style='text-align: center;'>🌍 Background</h2>", unsafe_allow_html=True)
 st.write(""" 
@@ -111,14 +108,6 @@ if 'day_data' in locals():
     negatif dengan jumlah rental, yang mengindikasikan bahwa peningkatan kelembapan dan kecepatan angin dapat 
     mengurangi jumlah pengguna sepeda. 📉 
     """)
-
-# Menambahkan gambar kedua di bagian Data Set
-st.image("gambar2.jpeg", caption="Pengguna Sepeda di Kota", use_column_width='auto', width=250)
-
-# Sumber Gambar dan Data
-st.markdown("---")
-st.markdown("<h2 style='text-align: center;'>📸 Sumber Gambar</h2>", unsafe_allow_html=True)
-st.write("Gambar-gambar dalam dashboard ini diambil dari Pinterest")
 
 st.markdown("<h2 style='text-align: center;'>📊 Sumber Data</h2>", unsafe_allow_html=True)
 st.write(""" 
