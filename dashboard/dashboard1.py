@@ -105,7 +105,7 @@ if 'day_data' in locals():
 st.markdown("<h2 style='text-align: center; color: #5D6D7E;'>📧 Kontak</h2>", unsafe_allow_html=True)
 st.write(""" 
 <div style='text-align: center;'>
-Untuk informasi lebih lanjut tentang dataset ini, silakan hubungi **Hadi Fanaee-T** (hadi.fanaee@fe.up.pt)
+Untuk informasi lebih lanjut tentang dataset ini, silakan hubungi Hadi Fanaee-T (hadi.fanaee@fe.up.pt)
 </div>
 """, unsafe_allow_html=True)
 
