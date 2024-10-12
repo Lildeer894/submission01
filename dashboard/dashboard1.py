@@ -18,22 +18,8 @@ Selamat datang di dunia Bike Sharing Systems! 🚲✨
 Ini adalah inovasi dalam penyewaan sepeda, di mana proses mulai dari keanggotaan hingga pengembalian telah menjadi otomatis. Dengan sistem ini, pengguna dapat dengan mudah menyewa sepeda dari lokasi tertentu dan mengembalikannya di tempat lain. 🌟 
 """)
 
-# Penjelasan - Data Set
-st.markdown("<h2 style='text-align: center;'>📊 Data Set</h2>", unsafe_allow_html=True)
-st.write(""" 
-Data yang digunakan berasal dari sistem *bike sharing* yang sangat dipengaruhi oleh **kondisi lingkungan** dan **musiman**. 📅 
-Kami menggunakan log historis selama dua tahun dari sistem **Capital Bikeshare** di *Washington D.C.*, yang memberikan wawasan berharga tentang pola penggunaan sepeda di kota.
-""")
-
-# Penjelasan - Associated Tasks
-st.markdown("<h2 style='text-align: center;'>🔍 Associated Tasks</h2>", unsafe_allow_html=True)
-st.write(""" 
-- **Regression**: Menghitung dan memprediksi jumlah penyewaan sepeda berdasarkan faktor *lingkungan* dan *musiman*. 📈 
-- **Event and Anomaly Detection**: Menganalisis hubungan antara jumlah penyewaan dan kejadian tertentu di kota. 🏙️ 
-""")
-
 # Load data
-data_path = 'C:\\Users\\Acer\\Desktop\\submission1-master\\data\\day.csv'  
+data_path = 'data/day.csv'  # Path relatif untuk deployment
 try:
     day_data = pd.read_csv(data_path)
     st.success("Data berhasil dimuat! ✅")
@@ -54,12 +40,6 @@ if 'day_data' in locals():
     plt.ylabel('Frekuensi')
     st.pyplot(plt)
 
-    st.write(""" 
-    Distribusi jumlah rental sepeda menunjukkan pola distribusi yang mirip dengan distribusi normal, 
-    dengan puncak yang menunjukkan rentang jumlah rental yang lebih tinggi. Ini mengindikasikan bahwa sebagian besar 
-    pengguna lebih cenderung menggunakan sepeda pada frekuensi yang moderat. 🌟 
-    """)
-
     # Visualisasi 2: Hubungan antara Suhu dan Jumlah Rental
     st.write("<h3 style='text-align: center;'>🌡️ Hubungan antara Suhu dan Jumlah Rental</h3>", unsafe_allow_html=True)
     plt.figure(figsize=(10, 5))
@@ -68,12 +48,6 @@ if 'day_data' in locals():
     plt.xlabel('Suhu (Celsius)')
     plt.ylabel('Jumlah Rental')
     st.pyplot(plt)
-
-    st.write(""" 
-    Dari grafik ini, kita dapat melihat adanya hubungan positif antara suhu dan jumlah rental. 
-    Ini berarti ketika suhu meningkat, jumlah rental sepeda cenderung meningkat, menunjukkan bahwa cuaca yang 
-    lebih hangat dapat mendorong lebih banyak orang untuk menggunakan sepeda. ☀️ 
-    """)
 
     # Visualisasi 3: Rata-rata Jumlah Rental berdasarkan Kategori Cuaca
     st.write("<h3 style='text-align: center;'>☁️ Rata-rata Jumlah Rental berdasarkan Kategori Cuaca</h3>", unsafe_allow_html=True)
@@ -86,12 +60,6 @@ if 'day_data' in locals():
     plt.xticks(ticks=[0, 1, 2, 3], labels=['Cerah', 'Berawan', 'Hujan', 'Berkabut'])
     st.pyplot(plt)
 
-    st.write(""" 
-    Grafik ini menunjukkan bahwa kategori cuaca cerah memiliki rata-rata jumlah rental yang jauh lebih tinggi 
-    dibandingkan dengan kondisi cuaca lainnya. Hal ini menunjukkan bahwa pengguna lebih cenderung menggunakan sepeda 
-    pada hari-hari yang cerah, sementara hujan dan cuaca berkabut mengurangi minat untuk menyewa sepeda. 🌧️🚫 
-    """)
-
     # Visualisasi 4: Matriks Korelasi
     st.write("<h3 style='text-align: center;'>🔗 Matriks Korelasi</h3>", unsafe_allow_html=True)
     numeric_columns = day_data.select_dtypes(include=[np.number])
@@ -100,32 +68,3 @@ if 'day_data' in locals():
     sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap='coolwarm')
     plt.title('Matriks Korelasi')
     st.pyplot(plt)
-
-    st.write(""" 
-    Matriks korelasi menunjukkan hubungan antara variabel numerik. Misalnya, kita dapat melihat bahwa 
-    variabel 'temp' memiliki korelasi positif yang kuat dengan 'cnt', menunjukkan bahwa suhu berkontribusi 
-    signifikan terhadap jumlah rental. Variabel lain, seperti 'hum' dan 'windspeed', menunjukkan korelasi 
-    negatif dengan jumlah rental, yang mengindikasikan bahwa peningkatan kelembapan dan kecepatan angin dapat 
-    mengurangi jumlah pengguna sepeda. 📉 
-    """)
-
-st.markdown("<h2 style='text-align: center;'>📊 Sumber Data</h2>", unsafe_allow_html=True)
-st.write(""" 
-Laboratory of Artificial Intelligence and Decision Support (LIAAD), University of Porto  
-INESC Porto, Campus da FEUP  
-Rua Dr. Roberto Frias, 378  
-4200 - 465 Porto, Portugal
-""")
-
-# Kontak
-st.markdown("<h2 style='text-align: center;'>📧 Kontak</h2>", unsafe_allow_html=True)
-st.write(""" 
-Untuk informasi lebih lanjut tentang dataset ini, silakan hubungi **Hadi Fanaee-T** (hadi.fanaee@fe.up.pt)
-""")
-
-st.markdown("---")
-st.markdown("<h2 style='text-align: center;'>✨ Words of Wisdom ✨</h2>", unsafe_allow_html=True)
-st.write(""" 
-_"Life is like riding a bicycle. To keep your balance, you must keep moving."_  
-– **Albert Einstein**
-""")
